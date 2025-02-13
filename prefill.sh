@@ -1,0 +1,9 @@
+set -x
+
+CUDA_VISIBLE_DEVICES=0 \
+VLLM_LOGGING_LEVEL=DEBUG \
+MOONCAKE_CONFIG_PATH=./mooncake.json \
+VLLM_USE_MODELSCOPE=True \
+python3 -m vllm.entrypoints.openai.api_server --model /mnt/nvme1/yujinbiao/Qwen2-7B-Instruct  \
+--port 8100 --max-model-len 10000 --gpu-memory-utilization 0.8 \
+--kv-transfer-config '{"kv_connector":"MooncakeConnector","kv_role":"kv_producer","kv_rank":0,"kv_parallel_size":2,"kv_buffer_size":2e9}'

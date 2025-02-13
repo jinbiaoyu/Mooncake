@@ -1,0 +1,26 @@
+vllm
+原始版本
+
+vllm0.1
+
+
+
+
+查看进程监听
+netstat -tulnp | grep 2379
+
+
+
+241  2025-02-13 16:24:22 yujinbiao sudo /etc/init.d/openibd start
+242* 2025-02-13 16:26:00 yujinbiao ls cat /etc/network/
+243  2025-02-13 16:26:11 yujinbiao sudo vi /etc/network/interfaces
+244  2025-02-13 16:26:19 yujinbiao sudo /etc/init.d/opensmd start
+
+
+ibstat
+ibdev2netdev
+sudo iblinkinfo
+sudo rdma link show
+
+
+
