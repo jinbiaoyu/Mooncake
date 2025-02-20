@@ -1,8 +1,0 @@
-{
-    "prefill_url": "10.121.4.13:13003",
-    "decode_url": "10.121.4.11:13003",
-    "metadata_server": "10.121.4.11:2379",
-    "metadata_backend": "etcd",
-    "protocol": "tcp",
-    "device_name": ""
-}

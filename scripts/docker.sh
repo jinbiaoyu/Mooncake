@@ -1,0 +1,1 @@
+sudo docker run --gpus=all --privileged  --shm-size 32g --network host -v $HOME:$HOME -v /mnt/nvme1/:/mnt/nvme1/  --entrypoint=/bin/bash  -it vllm-v0.1

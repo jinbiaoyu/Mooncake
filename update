@@ -5,9 +5,18 @@ vllm0.1
 
 
 
+export http_proxy=http://mtcteam:0d47d677c3e7@10.119.176.202:3128 
+export https_proxy=http://mtcteam:0d47d677c3e7@10.119.176.202:3128
+
+unset http_proxy https_proxy
+
+nohup python3 my_script.py > my_log.out 2>&1 &
+
 
 查看进程监听
 netstat -tulnp | grep 2379
+
+
 
 
 
@@ -17,10 +26,25 @@ netstat -tulnp | grep 2379
 244  2025-02-13 16:26:19 yujinbiao sudo /etc/init.d/opensmd start
 
 
+
 ibstat
 ibdev2netdev
 sudo iblinkinfo
 sudo rdma link show
+nvidia-smi topo -m
+
+rsync -avz -e "ssh -J yujinbiao@jump-vscode.sensetime.com -p 22" -P 2222  scripts  root@103.237.39.233:/data/yujinbiao/
+
+IB  高速通信协议
+NIC 网卡
+mlx5_0 买劳斯
+RDMA 远程直接访问GPU
+NUMA 非一致性内存访问，用于多处理器，多设备架构，
+VRAM 显存
+DRAM 内存
+
+
+
 
 
 
