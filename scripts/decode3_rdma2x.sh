@@ -2,7 +2,7 @@ set -x
 
 CUDA_VISIBLE_DEVICES=0 \
 VLLM_LOGGING_LEVEL=DEBUG \
-MOONCAKE_CONFIG_PATH=./mooncake2.json \
+MOONCAKE_CONFIG_PATH=./mooncake3_rdma_2x.json \
 VLLM_DISTRIBUTED_KV_ROLE=consumer \
 VLLM_USE_MODELSCOPE=True \
 python3 -m vllm.entrypoints.openai.api_server --model /data/yujinbiao/Qwen2.5-7B-Instruct --port 8200 --max-model-len 10000 --gpu-memory-utilization 0.8 \
